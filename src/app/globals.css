@@ -25,3 +25,8 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.headline {
+  color: black;
+  font-size: 2rem;
+}
