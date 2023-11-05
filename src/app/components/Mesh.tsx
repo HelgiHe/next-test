@@ -1,9 +1,9 @@
-// Mesh Component
+// @ts-nocheck
 "use client";
 import React, { useRef } from "react";
 import { useThree, useFrame } from "@react-three/fiber";
-import Polyhedron from "./Polyhedron";
-import { Html, OrbitControls } from "@react-three/drei";
+import { Polyhedron } from "./Polyhedron";
+import { OrbitControls } from "@react-three/drei";
 
 export default function Mesh() {
   const pivotRef = useRef();
@@ -11,12 +11,17 @@ export default function Mesh() {
 
   const { mouse } = useThree();
 
-
   useFrame(() => {
     if (pivotRef.current) {
       const rotationSpeed = 0.8; // Adjust this value to control the rotation speed
-      pivotRef.current.rotation.y += (mouse.x * Math.PI * 2 - pivotRef.current.rotation.y) * rotationSpeed * 0.01;
-      pivotRef.current.rotation.x += (-mouse.y * Math.PI * 2 - pivotRef.current.rotation.x) * rotationSpeed * 0.01;
+      pivotRef.current.rotation.y +=
+        (mouse.x * Math.PI * 2 - pivotRef.current.rotation.y) *
+        rotationSpeed *
+        0.01;
+      pivotRef.current.rotation.x +=
+        (-mouse.y * Math.PI * 2 - pivotRef.current.rotation.x) *
+        rotationSpeed *
+        0.01;
     }
   });
 

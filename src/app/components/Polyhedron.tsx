@@ -1,18 +1,12 @@
+// @ts-nocheck
+
 "use client"
 
 import React, { forwardRef, useRef, useImperativeHandle } from 'react';
 import * as THREE from 'three';
-import { useFrame } from '@react-three/fiber';
 
 const Polyhedron = forwardRef((props, parentRef) => {
   const localRef = useRef();
-
-  // useFrame((_, delta) => {
-  //   if (localRef.current) {
-  //     localRef.current.rotation.x += 0.2 * delta;
-  //     localRef.current.rotation.y += 0.05 * delta;
-  //   }
-  // });
 
   const threeColor = new THREE.Color(props.color);
 
@@ -34,4 +28,6 @@ const Polyhedron = forwardRef((props, parentRef) => {
   );
 });
 
-export default Polyhedron;
+Polyhedron.displayName = 'Polyhedron';
+
+export { Polyhedron };

@@ -1,25 +1,32 @@
-"use client";
-import { animated, useSpring } from "react-spring";
+"use client"
+import { animated, useSpring } from 'react-spring';
 
-export const AnimatedText = ({ children, ...props }) => {
-  const items = children.split("");
-
-  const springs = items.map((_, i) =>
-    useSpring({ 
-      opacity: 1, 
-      from: { opacity: 0 }, 
-      delay: i * 100
-    })
-  );
-
-  return items.map((item, index) => (
-    <animated.span
-      key={index}
-      style={springs[index]}
-      {...props}
-    >
-      {item}
+// This component represents a single animated character
+const AnimatedCharacter = ({ character, index, ...props }) => {
+  const style = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    delay: index * 100,
+  });
+  
+  return (
+    <animated.span style={style} {...props}>
+      {character}
     </animated.span>
-  ));
+  );
 };
 
+export const AnimatedText = ({ children, ...props }) => {
+  return (
+    <>
+      {children.split('').map((character, index) => (
+        <AnimatedCharacter
+          key={`${character}-${index}`} // Using template literals for unique keys if characters repeat
+          character={character}
+          index={index}
+          {...props}
+        />
+      ))}
+    </>
+  );
+};
