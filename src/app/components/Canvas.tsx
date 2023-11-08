@@ -4,8 +4,10 @@ import Mesh from "./Mesh";
 
 export default function Canvas() {
   return (
-    <ThreeCanvas onCreated={({ gl }) => gl.setClearColor("white")}>
+    <div className="bg-gradient-main h-full">
+    <ThreeCanvas gl={{ alpha: true }} style={{ background: 'transparent' }}>
       <Mesh />
     </ThreeCanvas>
+    </div>
   );
 }
