@@ -21,7 +21,7 @@ export const AnimatedText = ({ children, ...props }) => {
     <>
       {children.split('').map((character, index) => (
         <AnimatedCharacter
-          key={`${character}-${index}`} // Using template literals for unique keys if characters repeat
+          key={`${character}-${index}`}
           character={character}
           index={index}
           {...props}

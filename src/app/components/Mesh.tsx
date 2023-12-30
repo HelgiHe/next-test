@@ -1,14 +1,29 @@
 // @ts-nocheck
 "use client";
-import React, { useRef } from "react";
+import React, { useState, useRef, useTransition } from "react";
 import { useThree, useFrame } from "@react-three/fiber";
 import { Polyhedron } from "./Polyhedron";
-import { OrbitControls } from "@react-three/drei";
+import {
+  AccumulativeShadows,
+  RandomizedLight,
+  Center,
+  Environment,
+  OrbitControls,
+} from "@react-three/drei";
+import { easing } from "maath";
 
-export default function Mesh() {
+import { Base } from "./Base";
+
+function Env() {
+  const [preset, setPreset] = useState("apartment");
+  // You can use the "inTransition" boolean to react to the loading in-between state,
+  // For instance by showing a message
+
+  return <Environment preset={preset} blur={0.65} />;
+}
+
+export default function Mesh({ position = [0,0,0] }) {
   const pivotRef = useRef();
-  const sphereRef = useRef();
-
   const { mouse } = useThree();
 
   useFrame(() => {
@@ -27,8 +42,10 @@ export default function Mesh() {
 
   return (
     <>
-      <directionalLight position={[1, 1, 1]} />
-      <group ref={pivotRef}>
+    
+
+      <Base position={position} />
+      {/* <group ref={pivotRef}>
         <Polyhedron
           ref={sphereRef}
           name="meshNormalMaterial"
@@ -36,8 +53,25 @@ export default function Mesh() {
           color="#ff0000"
           pivotRef={pivotRef}
         />
-      </group>
-      <OrbitControls target-y={1} />
+      </group> */}
+      <AccumulativeShadows
+        temporal
+        frames={200}
+        color="purple"
+        colorBlend={0.5}
+        opacity={1}
+        scale={10}
+        alphaTest={0.85}
+      >
+        <RandomizedLight
+          amount={8}
+          radius={5}
+          ambient={0.5}
+          position={[5, 3, 2]}
+          bias={0.001}
+        />
+      </AccumulativeShadows>
+      {/* <Env /> */}
     </>
   );
 }
