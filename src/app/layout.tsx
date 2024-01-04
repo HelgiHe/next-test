@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-gradient-bg h-full">
-        <div className="absolute bg-transparent w-full top-20 left-4 text-black z-10 flex justify-center">
+        <div className="absolute bg-transparent w-full top-20 left-4 z-10 flex justify-center">
           <div className="rounded bg-off-white flex justify-center items-center p-[1px]">
             <Link
               className="bg-green-highlight text-dark-blue py-3.5 px-5 rounded border border-dark-blue text-sm"

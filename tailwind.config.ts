@@ -15,6 +15,9 @@ const config: Config = {
         "dark-blue": '#0F084B',  
         "off-white": '#EDFCFA',
       },
+      fontFamily: {
+        'gilroy-semibold': ["Gilroy-SemiBold"],
+      },
       backgroundImage: {
         'gradient-bg': 'linear-gradient(to right, #0f2027, #203a43, #2c5364)',
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
