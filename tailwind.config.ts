@@ -17,6 +17,7 @@ const config: Config = {
       },
       fontFamily: {
         'gilroy-semibold': ["Gilroy-SemiBold"],
+        'gilroy-medium': ["Gilroy-Medium"],
       },
       backgroundImage: {
         'gradient-bg': 'linear-gradient(to right, #0f2027, #203a43, #2c5364)',

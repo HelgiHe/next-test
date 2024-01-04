@@ -21,7 +21,7 @@ export default function RootLayout({
         <div className="absolute bg-transparent w-full top-20 left-4 z-10 flex justify-center">
           <div className="rounded bg-off-white flex justify-center items-center p-[1px]">
             <Link
-              className="bg-green-highlight text-dark-blue py-3.5 px-5 rounded border border-dark-blue text-sm"
+              className="bg-green-highlight font-gilroy-medium text-dark-blue py-3.5 px-5 rounded border border-dark-blue text-sm"
               href="/projects"
             >
               Projects
@@ -29,7 +29,7 @@ export default function RootLayout({
           </div>
           <div className="rounded bg-off-white flex mx-8 justify-center items-center p-[1px]">
             <Link
-              className="bg-purple-highlight text-dark-blue py-3.5 px-5 rounded border border-dark-blue text-sm"
+              className="bg-purple-highlight font-gilroy-medium text-dark-blue py-3.5 px-5 rounded border border-dark-blue text-sm"
               href="/about"
             >
               About
@@ -38,7 +38,7 @@ export default function RootLayout({
           <div className="rounded bg-off-white flex justify-center items-center p-[1px]">
             <a
               href="mailto:helgihel@gmail.com"
-              className="bg-blue-highlight text-dark-blue py-3.5 px-5 rounded border border-dark-blue text-sm"
+              className="bg-blue-highlight font-gilroy-medium text-dark-blue py-3.5 px-5 rounded border border-dark-blue text-sm"
             >
               Contact
             </a>
