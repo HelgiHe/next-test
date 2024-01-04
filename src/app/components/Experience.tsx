@@ -40,7 +40,7 @@ export default function Experience() {
 
   return (
     <>
-      <OrbitControls makeDefault />
+      {/* <OrbitControls makeDefault /> */}
 
       <Center>
         <mesh geometry={nodes.baked.geometry}>

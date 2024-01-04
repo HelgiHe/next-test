@@ -16,6 +16,7 @@ const config: Config = {
         "off-white": '#EDFCFA',
       },
       backgroundImage: {
+        'gradient-bg': 'linear-gradient(to right, #0f2027, #203a43, #2c5364)',
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
