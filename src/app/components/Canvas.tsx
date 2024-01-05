@@ -1,5 +1,5 @@
 "use client";
-import { Canvas as ThreeCanvas, useThree } from "@react-three/fiber";
+import { Canvas as ThreeCanvas } from "@react-three/fiber";
 import Experience from "./Experience";
 
 export default function Canvas() {

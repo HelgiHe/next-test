@@ -29,8 +29,7 @@ export default function RootLayout({
           <div className="rounded bg-off-white flex justify-center items-center p-[1px]">
             <Link
               className={clsx(
-                "bg-green-highlight font-gilroy-medium text-dark-blue py-3.5 px-5 rounded border border-dark-blue text-base",
-                { "bg-off-white": isProjectPath }, {"bg-green-highlight": !isProjectPath}
+                "bg-green-highlight font-gilroy-medium text-dark-blue py-3.5 px-5 rounded border border-dark-blue text-base"
               )}
               href="/"
             >
@@ -40,8 +39,7 @@ export default function RootLayout({
           <div className="rounded bg-off-white flex mx-8 justify-center items-center p-[1px]">
             <Link
               className={clsx(
-                "font-gilroy-medium text-dark-blue py-3.5 px-5 rounded border border-dark-blue text-base",
-                { "bg-off-white": isProjectPath }, {"bg-purple-highlight": !isProjectPath}
+                "font-gilroy-medium text-dark-blue py-3.5 px-5 rounded border border-dark-blue bg-purple-highlight text-base"
               )}
               href="/projects"
             >
@@ -51,8 +49,7 @@ export default function RootLayout({
           <div className="rounded bg-off-white flex justify-center items-center p-[1px]">
             <Link
               className={clsx(
-                "font-gilroy-medium text-dark-blue py-3.5 px-5 rounded border border-dark-blue text-base",
-                { "bg-off-white": isProjectPath }, {"bg-blue-highlight": !isProjectPath}
+                "font-gilroy-medium text-dark-blue py-3.5 px-5 rounded border border-dark-blue text-base bg-blue-highlight"
               )}
               href="/about"
             >
