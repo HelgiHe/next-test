@@ -19,16 +19,6 @@ export default function MacbookExperience({ url, model }: { url: string, model: 
   return (
     <>
       <Environment preset="city" />
-
-      <PresentationControls
-        global
-        rotation={[0.13, 0.1, 0]}
-        polar={[-0.4, 0.2]}
-        azimuth={[-1, 0.75]}
-        config={{ mass: 2, tension: 400 }}
-        snap={{ mass: 4, tension: 400 }}
-      >
-        <Float rotationIntensity={0.4}>
           <rectAreaLight
             width={2.5}
             height={1.65}
@@ -56,8 +46,6 @@ export default function MacbookExperience({ url, model }: { url: string, model: 
               />
             </Html>
           </primitive>
-        </Float>
-      </PresentationControls>
 
       <ContactShadows position-y={-1.4} opacity={0.4} scale={5} blur={2.4} />
     </>
